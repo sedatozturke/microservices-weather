@@ -1,0 +1,14 @@
+services:
+  cloud-weather-postgres:
+    image: debezium/postgres:13-alpine
+    environment:
+      - POSTGRES_DATABASE=cloud_weather_dev
+      - POSTGRES_USER=cloud_weather_dev
+      - POSTGRES_PASSWORD=cloud_weather_dev
+    ports:
+      - 5434:5432
+    volumes:
+      - postgres-data:/data/db
+
+volumes:
+  postgres-data:
