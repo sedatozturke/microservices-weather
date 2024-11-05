@@ -1,0 +1,6 @@
+@CloudWeather.Report_HostAddress = http://localhost:5011
+
+GET {{CloudWeather.Report_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
